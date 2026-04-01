@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ony</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("CcwvYE2CCkCjqa5kZ");
+      })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">Ony's personal website</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skill</a></li>
+                    <li><a href="#contact">Contact information</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hello，I'm <span>ony</span></h1>
+            <a href="#projects" class="btn">View my projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Name：ony</p>
+                    <p>Gender: Male</p>
+                    <p>A graphic design student Graphic designer</p>
+                </div>
+                <div class="about-image">
+                    <img src="1.jpg" alt="photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="本草新韵_画板 1.jpg" alt="本草新韵">
+                    <h3>本草新韵</h3>
+                    <p>一个中药与中式美学结合的项目</p>
+                    <a href="#" class="btn">查看详情</a>
+                </div>
+                <div class="project-card">
+                    <img src="忆匣子_画板 1.jpg" alt="忆匣子">
+                    <h3>忆匣子</h3>
+                    <p>一个关于人口老龄化的项目</p>
+                    <a href="#" class="btn">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skill</h2>
+            <div class="skills-content">
+                <div class="skill-chart">
+                    <canvas id="skillChart"></canvas>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">平面与色彩基本知识</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">素描与色彩基本知识</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">软件的运用</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>  
+                        <div class="skill-item">
+                        <span class="skill-name">创意思维</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                    </div>
+                        <div class="skill-item">
+                            <span class="skill-name">设计理论</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">VI/UI设计</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>如果您对我的工作感兴趣，或者有任何问题，欢迎随时联系我。</p>
+                    <ul>
+                        <li>邮箱：ony995577@gmail.com</li>
+                        <li>电话：15519591435</li>
+                        <li>地址：贵州省贵阳市</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="您的留言" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="messages" class="messages">
+        <div class="container">
+            <h2>留言板</h2>
+            <div class="message-actions">
+                <button id="clearMessages" class="btn">清空留言</button>
+            </div>
+            <div id="messageList" class="message-list">
+                <p>暂无留言</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ony的个人网站</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
